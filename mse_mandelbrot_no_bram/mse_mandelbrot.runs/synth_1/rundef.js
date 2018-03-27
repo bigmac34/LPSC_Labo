@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log mse_mandelbrot.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mse_mandelbrot.tcl" );
+         "-log mandelbrot_calculator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mandelbrot_calculator.tcl" );
 
 
 

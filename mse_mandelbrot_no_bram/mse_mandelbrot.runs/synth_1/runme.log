@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log mse_mandelbrot.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mse_mandelbrot.tcl
+    with args -log mandelbrot_calculator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mandelbrot_calculator.tcl
 
 
 ****** Vivado v2017.4 (64-bit)
@@ -8,129 +8,43 @@
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source mse_mandelbrot.tcl -notrace
-Command: synth_design -top mse_mandelbrot -part xc7a200tsbg484-1
+source mandelbrot_calculator.tcl -notrace
+Command: synth_design -top mandelbrot_calculator -part xc7a200tsbg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8672 
+INFO: Helper process launched with PID 6496 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 347.074 ; gain = 99.066
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 332.094 ; gain = 101.633
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mse_mandelbrot' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/mse_mandelbrot.vhd:51]
-	Parameter C_CHANNEL_NUMBER bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'hdmi' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd:62]
-	Parameter C_CHANNEL_NUMBER bound to: 4 - type: integer 
-	Parameter C_DATA_SIZE bound to: 16 - type: integer 
-	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
-	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000010010110000000000010100000000000001000110000000000000011000000000000010100000000000001010000000000000000110000010101000000000000100111101100000000000000000000000000000000 
-	Parameter C_RESOLUTION bound to: 1024x600 - type: string 
-INFO: [Synth 8-113] binding component instance 'BUFGClkSysToClkVgaHdmixI' to cell 'BUFG' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd:363]
-INFO: [Synth 8-3491] module 'clk_vga_hdmi_1024x600' declared at 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/.Xil/Vivado-6448-MACCHI/realtime/clk_vga_hdmi_1024x600_stub.vhdl:5' bound to instance 'ClkVgaHdmi1024x600xI' of component 'clk_vga_hdmi_1024x600' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd:380]
-INFO: [Synth 8-638] synthesizing module 'clk_vga_hdmi_1024x600' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/.Xil/Vivado-6448-MACCHI/realtime/clk_vga_hdmi_1024x600_stub.vhdl:16]
-INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga.vhd:47]
-	Parameter C_DATA_SIZE bound to: 16 - type: integer 
-	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
-	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000010010110000000000010100000000000001000110000000000000011000000000000010100000000000001010000000000000000110000010101000000000000100111101100000000000000000000000000000000 
-INFO: [Synth 8-638] synthesizing module 'vga_stripes' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_stripes.vhd:46]
-	Parameter C_DATA_SIZE bound to: 16 - type: integer 
-	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
-	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000010010110000000000010100000000000001000110000000000000011000000000000010100000000000001010000000000000000110000010101000000000000100111101100000000000000000000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'vga_stripes' (1#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_stripes.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'vga_controler' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_controler.vhd:45]
-	Parameter C_DATA_SIZE bound to: 16 - type: integer 
-	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000010010110000000000010100000000000001000110000000000000011000000000000010100000000000001010000000000000000110000010101000000000000100111101100000000000000000000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'vga_controler' (2#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_controler.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'vga' (3#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga.vhd:47]
-INFO: [Synth 8-638] synthesizing module 'vga_to_hdmi' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:47]
-	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
-	Parameter C_CHANNEL_NUMBER bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'tmds_encoder' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:43]
-	Parameter C_TMDS_DATA_SIZE bound to: 8 - type: integer 
-	Parameter C_TMDS_ENCODED_DATA_SIZE bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'tmds_encoder' (4#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'serializer_10_to_1' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd:45]
-	Parameter C_TMDS_ENCODED_DATA_SIZE bound to: 10 - type: integer 
-	Parameter DATA_RATE_OQ bound to: DDR - type: string 
-	Parameter DATA_RATE_TQ bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 10 - type: integer 
-	Parameter INIT_OQ bound to: 1'b1 
-	Parameter INIT_TQ bound to: 1'b1 
-	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
-	Parameter IS_CLK_INVERTED bound to: 1'b0 
-	Parameter IS_D1_INVERTED bound to: 1'b0 
-	Parameter IS_D2_INVERTED bound to: 1'b0 
-	Parameter IS_D3_INVERTED bound to: 1'b0 
-	Parameter IS_D4_INVERTED bound to: 1'b0 
-	Parameter IS_D5_INVERTED bound to: 1'b0 
-	Parameter IS_D6_INVERTED bound to: 1'b0 
-	Parameter IS_D7_INVERTED bound to: 1'b0 
-	Parameter IS_D8_INVERTED bound to: 1'b0 
-	Parameter IS_T1_INVERTED bound to: 1'b0 
-	Parameter IS_T2_INVERTED bound to: 1'b0 
-	Parameter IS_T3_INVERTED bound to: 1'b0 
-	Parameter IS_T4_INVERTED bound to: 1'b0 
-	Parameter SERDES_MODE bound to: MASTER - type: string 
-	Parameter SRVAL_OQ bound to: 1'b0 
-	Parameter SRVAL_TQ bound to: 1'b0 
-	Parameter TBYTE_CTL bound to: FALSE - type: string 
-	Parameter TBYTE_SRC bound to: FALSE - type: string 
-	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-113] binding component instance 'MasterOSERDESE2xI' to cell 'OSERDESE2' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd:62]
-	Parameter DATA_RATE_OQ bound to: DDR - type: string 
-	Parameter DATA_RATE_TQ bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 10 - type: integer 
-	Parameter INIT_OQ bound to: 1'b1 
-	Parameter INIT_TQ bound to: 1'b1 
-	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
-	Parameter IS_CLK_INVERTED bound to: 1'b0 
-	Parameter IS_D1_INVERTED bound to: 1'b0 
-	Parameter IS_D2_INVERTED bound to: 1'b0 
-	Parameter IS_D3_INVERTED bound to: 1'b0 
-	Parameter IS_D4_INVERTED bound to: 1'b0 
-	Parameter IS_D5_INVERTED bound to: 1'b0 
-	Parameter IS_D6_INVERTED bound to: 1'b0 
-	Parameter IS_D7_INVERTED bound to: 1'b0 
-	Parameter IS_D8_INVERTED bound to: 1'b0 
-	Parameter IS_T1_INVERTED bound to: 1'b0 
-	Parameter IS_T2_INVERTED bound to: 1'b0 
-	Parameter IS_T3_INVERTED bound to: 1'b0 
-	Parameter IS_T4_INVERTED bound to: 1'b0 
-	Parameter SERDES_MODE bound to: SLAVE - type: string 
-	Parameter SRVAL_OQ bound to: 1'b0 
-	Parameter SRVAL_TQ bound to: 1'b0 
-	Parameter TBYTE_CTL bound to: FALSE - type: string 
-	Parameter TBYTE_SRC bound to: FALSE - type: string 
-	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-113] binding component instance 'SlaveOSERDESE2xI' to cell 'OSERDESE2' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd:108]
-INFO: [Synth 8-256] done synthesizing module 'serializer_10_to_1' (5#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd:45]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxCh0xI' to cell 'OBUFDS' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:207]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxCh1xI' to cell 'OBUFDS' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:216]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxCh2xI' to cell 'OBUFDS' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:225]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxClkxI' to cell 'OBUFDS' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'vga_to_hdmi' (6#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'hdmi' (7#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd:62]
-INFO: [Synth 8-638] synthesizing module 'image_generator' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/image_generator.vhd:46]
-	Parameter C_DATA_SIZE bound to: 16 - type: integer 
-	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
-	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000010010110000000000010100000000000001000110000000000000011000000000000010100000000000001010000000000000000110000010101000000000000100111101100000000000000000000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'image_generator' (8#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/image_generator.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'mse_mandelbrot' (9#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/mse_mandelbrot.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'mandelbrot_calculator' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:50]
+	Parameter comma bound to: 12 - type: integer 
+	Parameter max_iter bound to: 100 - type: integer 
+	Parameter SIZE bound to: 16 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:205]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:155]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_x_imaginary_s_reg' and it is trimmed from '32' to '31' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:149]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_imaginary_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'mandelbrot_calculator' (1#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:50]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[15]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[14]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[13]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[12]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[11]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[10]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[9]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[8]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[7]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[6]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[5]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[4]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[3]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[2]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[1]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 401.852 ; gain = 153.844
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 385.652 ; gain = 155.191
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -140,53 +54,87 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 401.852 ; gain = 153.844
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 385.652 ; gain = 155.191
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/.Xil/Vivado-6448-MACCHI/dcp1/clk_vga_hdmi_1024x600_in_context.xdc] for cell 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI'
-Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/.Xil/Vivado-6448-MACCHI/dcp1/clk_vga_hdmi_1024x600_in_context.xdc] for cell 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI'
 Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ClkSys100MhzxC'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ClkSys100MhzxC'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:9]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports ClkSys100MhzxC]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:9]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'RstxR'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxCecxSIO'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxClkNxSO'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxClkPxSO'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxHpdxSI'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxRsclxSO'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxRsdaxSIO'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxNxDO[0]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxPxDO[0]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxNxDO[1]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxPxDO[1]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxNxDO[2]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HdmiTxPxDO[2]'. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mse_mandelbrot_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/mse_mandelbrot_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 792.770 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 765.426 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for HdmixI/\ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "VCountxD" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "VgaSyncxS[HSyncxS]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "VgaSyncxS[VSyncxS]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:204]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:205]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:126]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd:122]
+INFO: [Synth 8-4471] merging register 'z_new_imaginary_s_reg[15:0]' into 'z_new_real_s_reg[15:0]' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element z_new_imaginary_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:181]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,30 +147,13 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     16 Bit       Adders := 2     
-	   8 Input      4 Bit       Adders := 3     
-	   9 Input      4 Bit       Adders := 3     
-	   4 Input      4 Bit       Adders := 3     
-	   3 Input      4 Bit       Adders := 3     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 42    
+	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
-	               24 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
-	               10 Bit    Registers := 3     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   7 Input     24 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 4     
-	   5 Input     10 Bit        Muxes := 6     
-	   4 Input     10 Bit        Muxes := 3     
-	   2 Input     10 Bit        Muxes := 9     
-	   2 Input      9 Bit        Muxes := 6     
-	   2 Input      8 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 12    
-	   2 Input      1 Bit        Muxes := 8     
-	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -230,46 +161,16 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module vga_stripes 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 3     
-Module vga_controler 
+Module mandelbrot_calculator 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     16 Bit       Adders := 2     
+	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 8     
-	   3 Input      1 Bit        Muxes := 2     
-Module tmds_encoder 
-Detailed RTL Component Info : 
-+---Adders : 
-	   8 Input      4 Bit       Adders := 1     
-	   9 Input      4 Bit       Adders := 1     
-	   4 Input      4 Bit       Adders := 1     
-	   3 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 14    
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-+---Muxes : 
-	   5 Input     10 Bit        Muxes := 2     
-	   4 Input     10 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 3     
-	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 4     
-Module image_generator 
-Detailed RTL Component Info : 
-+---Registers : 
-	               24 Bit    Registers := 1     
-+---Muxes : 
-	   7 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -285,38 +186,42 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "HdmixI/VgaxI/VgaControlerxI/VgaSyncxS[HSyncxS]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "HdmixI/VgaxI/VgaControlerxI/VCountxD" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "HdmixI/VgaxI/VgaControlerxI/VgaSyncxS[VSyncxS]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[6]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[7]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[5]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[4]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[7]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[3]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[14]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[2]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[22]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[1]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[15]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[0]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[8]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[14]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[13]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[13]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[12]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[12]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[10]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[15]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[11]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[11]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[21]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[10]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[9]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[9]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[18]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[8]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[19]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[22]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[23]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[21]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[17]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[20]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[19]'
-INFO: [Synth 8-3886] merging instance 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[23]' (FDC) to 'ImageGeneratorxB.ImageGeneratorxI/DataxD_reg[16]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC0xI/TmdsEncodedDataxDO_reg[7]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC0xI/TmdsEncodedDataxDO_reg[5]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[6]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[4]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[5]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[3]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC2xI/TmdsEncodedDataxDO_reg[7]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC2xI/TmdsEncodedDataxDO_reg[5]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[7]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[1]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[1]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[0]'
-INFO: [Synth 8-3886] merging instance 'HdmixI/VgaToHdmixI/TmdsEncoderC2xI/TmdsEncodedDataxDO_reg[4]' (FD) to 'HdmixI/VgaToHdmixI/TmdsEncoderC2xI/TmdsEncodedDataxDO_reg[2]'
+WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:181]
+DSP Report: Generating DSP z_new_real_s1, operation Mode is: A*B.
+DSP Report: operator z_new_real_s1 is absorbed into DSP z_new_real_s1.
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[15]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[14]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[13]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[12]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[11]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[10]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[9]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[8]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[7]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[6]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[5]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[4]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[3]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[2]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[1]
+WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 765.426 ; gain = 534.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mandelbrot_calculator | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -327,20 +232,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/ClkSys100MhzxC' to pin 'HdmixI/ClkVgaHdmi1024x600xG.BUFGClkSysToClkVgaHdmixI/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/ClkHdmixC' to pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/bbstub_ClkHdmixC/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/ClkSys100MhzxC' to 'HdmixI/ClkVgaHdmi1024x600xG.BUFGClkSysToClkVgaHdmixI/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/ClkVgaxC' to pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/bbstub_ClkVgaxC/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/ClkSys100MhzxC' to 'HdmixI/ClkVgaHdmi1024x600xG.BUFGClkSysToClkVgaHdmixI/O'
-INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 792.770 ; gain = 544.762
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 802.492 ; gain = 572.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 827.156 ; gain = 579.148
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 802.641 ; gain = 572.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,7 +251,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,7 +275,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -389,7 +288,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -401,87 +300,67 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+----------------------+----------+
-|      |BlackBox name         |Instances |
-+------+----------------------+----------+
-|1     |clk_vga_hdmi_1024x600 |         1|
-+------+----------------------+----------+
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----------------------------+------+
-|      |Cell                         |Count |
-+------+-----------------------------+------+
-|1     |clk_vga_hdmi_1024x600_bbox_0 |     1|
-|2     |BUFG                         |     1|
-|3     |CARRY4                       |    36|
-|4     |LUT1                         |     4|
-|5     |LUT2                         |   109|
-|6     |LUT3                         |   124|
-|7     |LUT4                         |    21|
-|8     |LUT5                         |    29|
-|9     |LUT6                         |    48|
-|10    |MUXF7                        |     4|
-|11    |OSERDESE2                    |     4|
-|12    |OSERDESE2_1                  |     4|
-|13    |FDCE                         |    39|
-|14    |FDRE                         |    32|
-|15    |FDSE                         |     3|
-|16    |IBUF                         |     2|
-|17    |OBUF                         |     1|
-|18    |OBUFDS                       |     4|
-+------+-----------------------------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    11|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |     2|
+|5     |LUT2    |    48|
+|6     |LUT3    |    17|
+|7     |LUT5    |     1|
+|8     |LUT6    |     2|
+|9     |FDCE    |    33|
+|10    |IBUF    |    19|
+|11    |OBUF    |    50|
++------+--------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------+---------------------+------+
-|      |Instance                              |Module               |Cells |
-+------+--------------------------------------+---------------------+------+
-|1     |top                                   |                     |   468|
-|2     |  HdmixI                              |hdmi                 |   402|
-|3     |    VgaToHdmixI                       |vga_to_hdmi          |    77|
-|4     |      SerializerChannel0xI            |serializer_10_to_1   |     2|
-|5     |      SerializerChannel1xI            |serializer_10_to_1_0 |     2|
-|6     |      SerializerChannel2xI            |serializer_10_to_1_1 |     2|
-|7     |      SerializerChannel3xI            |serializer_10_to_1_2 |     2|
-|8     |      TmdsEncoderC0xI                 |tmds_encoder         |    25|
-|9     |      TmdsEncoderC1xI                 |tmds_encoder_3       |    20|
-|10    |      TmdsEncoderC2xI                 |tmds_encoder_4       |    20|
-|11    |    VgaxI                             |vga                  |   321|
-|12    |      VgaControlerxI                  |vga_controler        |   321|
-|13    |  \ImageGeneratorxB.ImageGeneratorxI  |image_generator      |    63|
-+------+--------------------------------------+---------------------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   185|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 836.184 ; gain = 197.258
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 836.184 ; gain = 588.176
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 822.250 ; gain = 212.016
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -489,10 +368,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-84 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+15 Infos, 53 Warnings, 15 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 836.184 ; gain = 599.648
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/mse_mandelbrot.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file mse_mandelbrot_utilization_synth.rpt -pb mse_mandelbrot_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 836.184 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 14:52:05 2018...
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 822.250 ; gain = 595.957
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/mandelbrot_calculator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mandelbrot_calculator_utilization_synth.rpt -pb mandelbrot_calculator_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 822.250 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 19:06:32 2018...
