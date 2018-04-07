@@ -14,37 +14,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6496 
+INFO: Helper process launched with PID 1184 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 332.094 ; gain = 101.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 332.504 ; gain = 101.578
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mandelbrot_calculator' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:50]
 	Parameter comma bound to: 12 - type: integer 
 	Parameter max_iter bound to: 100 - type: integer 
 	Parameter SIZE bound to: 16 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:205]
-WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:155]
-WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_x_imaginary_s_reg' and it is trimmed from '32' to '31' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:149]
-WARNING: [Synth 8-3936] Found unconnected internal register 'z_imaginary_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:156]
+WARNING: [Synth 8-614] signal 'z_real2_sub_imaginary2_s' is read in the process but is not in the sensitivity list [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:138]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:208]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_imaginary_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:159]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_2_real_x_imaginary_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:153]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_x_imaginary_s_reg' and it is trimmed from '32' to '31' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:152]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_real_fut_s_reg' and it is trimmed from '32' to '28' bits. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:158]
 INFO: [Synth 8-256] done synthesizing module 'mandelbrot_calculator' (1#1) [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:50]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[15]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[14]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[13]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[12]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[11]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[10]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[9]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[8]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[7]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[6]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[5]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[4]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[3]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[2]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[1]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 385.652 ; gain = 155.191
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 385.676 ; gain = 154.750
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -54,7 +40,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 385.652 ; gain = 155.191
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 385.676 ; gain = 154.750
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -113,28 +99,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 765.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 766.391 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 766.391 ; gain = 535.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 766.391 ; gain = 535.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 766.391 ; gain = 535.465
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'z_new_imaginary_s_reg[15:0]' into 'z_new_real_s_reg[15:0]' [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:180]
-WARNING: [Synth 8-6014] Unused sequential element z_new_imaginary_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:180]
-WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:181]
+WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:184]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 765.426 ; gain = 534.965
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 766.391 ; gain = 535.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -149,10 +133,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -166,10 +150,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -186,27 +170,17 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:181]
-DSP Report: Generating DSP z_new_real_s1, operation Mode is: A*B.
-DSP Report: operator z_new_real_s1 is absorbed into DSP z_new_real_s1.
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[15]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[14]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[13]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[12]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[11]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[10]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[9]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[8]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[7]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[6]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[5]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[4]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[3]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[2]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[1]
-WARNING: [Synth 8-3331] design mandelbrot_calculator has unconnected port c_imaginary[0]
+WARNING: [Synth 8-6014] Unused sequential element iterations_s_reg was removed.  [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:184]
+DSP Report: Generating DSP z_new_imaginary_s1, operation Mode is: A*B.
+DSP Report: operator z_new_imaginary_s1 is absorbed into DSP z_new_imaginary_s1.
+DSP Report: Generating DSP z_real2_s, operation Mode is: A*B.
+DSP Report: operator z_real2_s is absorbed into DSP z_real2_s.
+DSP Report: Generating DSP z_imaginary2_s, operation Mode is: A*B.
+DSP Report: operator z_imaginary2_s is absorbed into DSP z_imaginary2_s.
+DSP Report: Generating DSP z_new_real_s0, operation Mode is: PCIN+A:B+C.
+DSP Report: operator z_new_real_s0 is absorbed into DSP z_new_real_s0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 765.426 ; gain = 534.965
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 766.391 ; gain = 535.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -217,6 +191,9 @@ DSP: Preliminary Mapping  Report (see note below)
 |Module Name           | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |mandelbrot_calculator | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_calculator | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_calculator | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_calculator | PCIN+A:B+C  | 10     | 18     | 28     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -233,13 +210,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 802.492 ; gain = 572.031
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 813.105 ; gain = 582.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 802.641 ; gain = 572.180
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 813.258 ; gain = 582.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,8 +227,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/Architecture/mandelbrot_calculator.vhd:182]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -275,7 +253,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -288,7 +266,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,25 +278,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,36 +309,38 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY4  |    11|
-|3     |DSP48E1 |     1|
-|4     |LUT1    |     2|
-|5     |LUT2    |    48|
-|6     |LUT3    |    17|
-|7     |LUT5    |     1|
-|8     |LUT6    |     2|
-|9     |FDCE    |    33|
-|10    |IBUF    |    19|
-|11    |OBUF    |    50|
-+------+--------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    16|
+|3     |DSP48E1   |     3|
+|4     |DSP48E1_1 |     1|
+|5     |LUT1      |    29|
+|6     |LUT2      |    50|
+|7     |LUT3      |    33|
+|8     |LUT4      |    16|
+|9     |LUT5      |     2|
+|10    |LUT6      |     1|
+|11    |FDCE      |    34|
+|12    |IBUF      |    35|
+|13    |OBUF      |    50|
++------+----------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   185|
+|1     |top      |       |   271|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 822.250 ; gain = 212.016
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 822.250 ; gain = 591.789
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 832.922 ; gain = 221.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 832.922 ; gain = 601.996
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -368,10 +348,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-15 Infos, 53 Warnings, 15 Critical Warnings and 0 Errors encountered.
+15 Infos, 22 Warnings, 15 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 822.250 ; gain = 595.957
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 832.922 ; gain = 606.473
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.runs/synth_1/mandelbrot_calculator.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mandelbrot_calculator_utilization_synth.rpt -pb mandelbrot_calculator_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 822.250 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 19:06:32 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 832.922 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  7 13:17:25 2018...
