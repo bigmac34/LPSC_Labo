@@ -11,12 +11,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2000000001fs"></ZoomEndTime>
-      <Cursor1Time time="77455000fs"></Cursor1Time>
+      <ZoomEndTime time="1500000001fs"></ZoomEndTime>
+      <Cursor1Time time="105335000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="186"></NameColumnWidth>
-      <ValueColumnWidth column_width="125"></ValueColumnWidth>
+      <ValueColumnWidth column_width="121"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="22" />
    <wvobject fp_name="/mandelbrot_calculator_tb/clk_sti" type="logic">

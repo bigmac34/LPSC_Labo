@@ -51,7 +51,7 @@ architecture testbench of mandelbrot_calculator_tb is
   signal c_imaginary_sti  : std_logic_vector(SIZE-1 downto 0);
   signal z_real_obs       : std_logic_vector(SIZE-1 downto 0);
   signal z_imaginary_obs  : std_logic_vector(SIZE-1 downto 0);
-  signal iterations_obs   : std_logic_vector(SIZE-1 downto 0);
+  signal iterations_obs   : std_logic_vector(7-1 downto 0);
 
   -- Internal singals
   signal sim_end_s : boolean := false; -- put true to end
@@ -63,7 +63,9 @@ architecture testbench of mandelbrot_calculator_tb is
     generic (
       comma : integer := 12; -- nombres de bits après la virgule
       max_iter : integer := 100;
-      SIZE : integer := 16);
+      SIZE : integer := 16;
+      SCREEN_RES 	: integer := 10);
+);
 
     port(
       clk         : in std_logic;
@@ -75,7 +77,12 @@ architecture testbench of mandelbrot_calculator_tb is
       c_imaginary : in std_logic_vector(SIZE-1 downto 0);
       z_real      : out std_logic_vector(SIZE-1 downto 0);
       z_imaginary : out std_logic_vector(SIZE-1 downto 0);
-      iterations  : out std_logic_vector(SIZE-1 downto 0)
+      iterations  : out std_logic_vector(7-1 downto 0);
+      
+      x_screen_i  : in std_logic_vector (10-1 downto 0);
+      y_screen_i  : in std_logic_vector (10-1 downto 0);
+      x_screen_o  : out std_logic_vector (10-1 downto 0);
+      y_screen_o  : out std_logic_vector (10-1 downto 0)
     );
   end component;
 
@@ -90,7 +97,8 @@ architecture testbench of mandelbrot_calculator_tb is
     generic map (
       comma       => comma,
       max_iter    => max_iter,
-      SIZE        => SIZE
+      SIZE        => SIZE,
+      SCREEN_RES  => ,
     )
     port map (
       clk         => clk_sti,
@@ -118,8 +126,10 @@ architecture testbench of mandelbrot_calculator_tb is
         start_sti <= '0';
         rst_sti <= '1';
         wait for 10 ns;
-        c_real_sti <= "0000" & "011000010100";
-        c_imaginary_sti <= "0000" & "001101000000";
+        --c_real_sti <= "0000" & "011000010100";
+        --c_imaginary_sti <= "0000" & "001101000000";
+        c_real_sti 		<= "0000" & "011000010100";
+        c_imaginary_sti <= "0000" & "001100110011";
         wait for 20 ns;
         rst_sti <= '0';
         wait for 10 ns;

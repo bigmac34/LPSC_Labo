@@ -30,7 +30,9 @@ use UNISIM.VComponents.all;
 entity mandelbrot_calculator is
 generic (comma	: integer := 12;	-- nombres de bits après la virgule
 	max_iter	: integer := 100;
-	SIZE		: integer := 16);
+	SIZE		: integer := 16;
+	SCREEN_RES 	: integer := 10;
+	SIZE_INTER  : integer := 7);
 port (
 	clk 		: in 	std_logic;
 	rst 		: in 	std_logic;
@@ -41,7 +43,12 @@ port (
 	c_imaginary	: in 	std_logic_vector(SIZE-1 downto 0);
 	z_real		: out 	std_logic_vector(SIZE-1 downto 0);
 	z_imaginary	: out 	std_logic_vector(SIZE-1 downto 0);
-	iterations	: out 	std_logic_vector(SIZE-1 downto 0)
+	iterations	: out 	std_logic_vector(SIZE_INTER-1 downto 0);
+	
+	x_screen_i  : in	std_logic_vector (SCREEN_RES-1 downto 0);
+	y_screen_i  : in 	std_logic_vector (SCREEN_RES-1 downto 0);
+	x_screen_o  : out 	std_logic_vector (SCREEN_RES-1 downto 0);
+	y_screen_o  : out 	std_logic_vector (SCREEN_RES-1 downto 0)
 );
 end mandelbrot_calculator;
 
@@ -69,7 +76,9 @@ architecture calculator of mandelbrot_calculator is
 	signal finished_s		: std_logic;
 	signal z_real_s			: std_logic_vector(SIZE-1 downto 0);
 	signal z_imaginary_s	: std_logic_vector(SIZE-1 downto 0);
-	signal iterations_s		: std_logic_vector(SIZE-1 downto 0);
+	signal iterations_s		: std_logic_vector(SIZE_INTER-1 downto 0);
+	signal c_real_s			: std_logic_vector(SIZE-1 downto 0);
+	signal c_imaginary_s	: std_logic_vector(SIZE-1 downto 0);
 
 	-- Signaux intermediaires pour les calculs
 	signal z_real2_s				: std_logic_vector(DOUBLE_SIZE-1 downto 0);
@@ -84,7 +93,7 @@ architecture calculator of mandelbrot_calculator is
 	-- Signaux pour de sorties des bascules
 	signal z_new_real_s				: std_logic_vector(SIZE-1 downto 0);
 	signal z_new_imaginary_s		: std_logic_vector(SIZE-1 downto 0);
-	signal new_iterations_s			: std_logic_vector(SIZE-1 downto 0);
+	signal new_iterations_s			: std_logic_vector(SIZE_INTER-1 downto 0);
 
 	-- Signaux de controle
 	signal enable_calcul: std_logic;
@@ -105,7 +114,9 @@ begin
 	z_imaginary <= z_imaginary_s;
 	iterations 	<= iterations_s;
 	finished	<= finished_s;
-
+	c_real_s	<= c_real;
+	c_imaginary_s	<= c_imaginary;
+		
 	--------------------
 	--  Combinatoire  --
 	--------------------
@@ -116,14 +127,14 @@ begin
 		z_imaginary_s 	<= z_new_imaginary_s;
 
 		--  Multiplicateurs  --
-		z_real2_s				<= std_logic_vector(signed(z_real_s) * signed(z_real_s));	-- ZR^2
-		z_imaginary2_s			<= std_logic_vector(signed(z_imaginary_s) * signed(z_imaginary_s));	-- ZI^2
-		z_real_x_imaginary_s	<= std_logic_vector(signed(z_real_s) * signed(z_imaginary_s));		-- ZR*ZI
-		z_2_real_x_imaginary_s	<= std_logic_vector(z_real_x_imaginary_s((2*SIZE)-2 downto 0) & '0');		-- 2*ZR*ZI
+		z_real2_s				<= std_logic_vector(signed(z_real_s) * signed(z_real_s));				-- ZR^2
+		z_imaginary2_s			<= std_logic_vector(signed(z_imaginary_s) * signed(z_imaginary_s));		-- ZI^2
+		z_real_x_imaginary_s	<= std_logic_vector(signed(z_real_s) * signed(z_imaginary_s));			-- ZR*ZI
+		z_2_real_x_imaginary_s	<= std_logic_vector(z_real_x_imaginary_s(DOUBLE_SIZE-2 downto 0) & '0');-- 2*ZR*ZI
 
 		--  Additionneurs - Soustracteurs  --
-		z_real2_sub_imaginary2_s 	<= std_logic_vector(signed(z_real2_s) - signed(z_imaginary2_s));
-		z_real2_add_imaginary2_s 	<= std_logic_vector(signed(z_real2_s) + signed(z_imaginary2_s));
+		z_real2_sub_imaginary2_s 	<= std_logic_vector(signed(z_real2_s) - signed(z_imaginary2_s));	-- ZR^2-ZI^2
+		z_real2_add_imaginary2_s 	<= std_logic_vector(signed(z_real2_s) + signed(z_imaginary2_s));	-- ZR^2+ZI^2
 		z_real_fut_s				<= std_logic_vector(signed(z_real2_sub_imaginary2_s) + signed(c_real & "000000000000"));
 		z_imaginary_fut_s			<= std_logic_vector(signed(z_2_real_x_imaginary_s) + signed(c_imaginary & "000000000000"));
 		new_iterations_s			<= std_logic_vector(signed(iterations_s) + 1);
@@ -143,7 +154,7 @@ begin
 	-----------------------------------------------
 	--  Reset, Bascules et incrément iterations  --
 	-----------------------------------------------
-	bascules: process(clk, rst, rst_calcul)
+	bascules: process(clk, rst, rst_calcul, x_screen_i, y_screen_i)
 	begin
 		-- Reset asynchrone --
 		if rst = '1' then
@@ -157,6 +168,9 @@ begin
 			z_new_imaginary_s	<= (others => '0');
 			iterations_s		<= (others => '0');
 		elsif rising_edge(clk) then
+			x_screen_o <= x_screen_i;
+			y_screen_o <= y_screen_i;
+			
 			if (enable_calcul = '1') then
 				--  Caster au bon endroit pour la gestion de la virgule
 				z_new_real_s	 	<= z_real_fut_s((SIZE+comma-1) downto comma);
