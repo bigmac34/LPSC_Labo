@@ -53,7 +53,7 @@ begin
   -- fixe la valeur des signaux utilitaires ----------------------------------
   c_re_min <= conv_std_logic_vector(c_bot_left_RE, (SIZE-COMMA)) & comma_padding; -- -2.0 fixed point arithmetic
   c_im_min <= conv_std_logic_vector(c_bot_left_IM, (SIZE-COMMA)) & comma_padding; -- -1.0 fixed point arithmetic
-  c_inc    <= "0000000000001100"; -- valeur virgule fixe selon regles 
+  c_inc    <= "0000000000001111"; -- valeur virgule fixe selon regles 
 
   -- processus combinatoire --------------------------------------------------
   process (clk, reset)

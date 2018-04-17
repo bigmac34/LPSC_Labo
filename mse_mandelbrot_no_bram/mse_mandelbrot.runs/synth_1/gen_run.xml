@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1523887990">
   <File Type="PA-TCL" Name="mandelbrot_calculator.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mandelbrot_calculator_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mandelbrot_calculator_reports.tcl"/>
   <File Type="RDS-RDS" Name="mandelbrot_calculator.vds"/>
-  <File Type="RDS-UTIL" Name="mandelbrot_calculator_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mandelbrot_calculator_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mandelbrot_calculator.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mandelbrot_calculator_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mandelbrot_calculator_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Architecture/mandelbrot_calculator.vhd">

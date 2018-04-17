@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Wed Feb 28 12:50:06 2018
+-- Date        : Wed Feb 28 12:50:05 2018
 -- Host        : t450s-debian running 64-bit Debian GNU/Linux testing (buster)
--- Command     : write_vhdl -force -mode funcsim
---               /home/joco/Documents/cours/FPGA/master/nexys_video/mse_mandelbrot/mse_mandelbrot.srcs/sources_1/ip/clk_hdmi_1024x600/clk_hdmi_1024x600_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top clk_hdmi_1024x600 -prefix
+--               clk_hdmi_1024x600_ clk_hdmi_1024x600_sim_netlist.vhdl
 -- Design      : clk_hdmi_1024x600
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity clk_hdmi_1024x600_clk_hdmi_1024x600_clk_wiz is
     PllLockedxSO : out STD_LOGIC;
     ClkSys100MhzxC : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clk_hdmi_1024x600_clk_hdmi_1024x600_clk_wiz : entity is "clk_hdmi_1024x600_clk_wiz";
 end clk_hdmi_1024x600_clk_hdmi_1024x600_clk_wiz;
 
 architecture STRUCTURE of clk_hdmi_1024x600_clk_hdmi_1024x600_clk_wiz is

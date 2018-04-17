@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar  1 19:51:19 2018
--- Host        : t450s-debian running 64-bit Debian GNU/Linux testing (buster)
--- Command     : write_vhdl -force -mode funcsim -rename_top clk_mandelbrot -prefix
---               clk_mandelbrot_ clk_mandelbrot_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+-- Date        : Tue Apr 17 19:15:21 2018
+-- Host        : MACCHI running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_sim_netlist.vhdl
 -- Design      : clk_mandelbrot
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,6 +21,8 @@ entity clk_mandelbrot_clk_mandelbrot_clk_wiz is
     PllLockedxSO : out STD_LOGIC;
     ClkSys100MhzxC : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of clk_mandelbrot_clk_mandelbrot_clk_wiz : entity is "clk_mandelbrot_clk_wiz";
 end clk_mandelbrot_clk_mandelbrot_clk_wiz;
 
 architecture STRUCTURE of clk_mandelbrot_clk_mandelbrot_clk_wiz is
@@ -82,7 +84,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 10.000000,
+      CLKOUT0_DIVIDE_F => 12.500000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,

@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Thu Mar  1 19:51:19 2018
-// Host        : t450s-debian running 64-bit Debian GNU/Linux testing (buster)
-// Command     : write_verilog -force -mode synth_stub -rename_top clk_mandelbrot -prefix
-//               clk_mandelbrot_ clk_mandelbrot_stub.v
+// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+// Date        : Tue Apr 17 19:15:21 2018
+// Host        : MACCHI running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/Labo/mse_mandelbrot_no_bram/mse_mandelbrot.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_stub.v
 // Design      : clk_mandelbrot
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a200tsbg484-1

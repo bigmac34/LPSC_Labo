@@ -181,12 +181,10 @@ architecture rtl of mse_mandelbrot is
 	component ram_dual_port is
 		port (
 			clka 	: IN 	STD_LOGIC;
-			ena 	: IN 	STD_LOGIC;
 			wea 	: IN 	STD_LOGIC_VECTOR(0 DOWNTO 0);
 			addra 	: IN 	STD_LOGIC_VECTOR(19 DOWNTO 0);
 			dina 	: IN 	STD_LOGIC_VECTOR(6 DOWNTO 0);
 			clkb 	: IN 	STD_LOGIC;
-			enb 	: IN 	STD_LOGIC;
 			addrb 	: IN 	STD_LOGIC_VECTOR(19 DOWNTO 0);
 			doutb 	: OUT 	STD_LOGIC_VECTOR(6 DOWNTO 0)
 		);
@@ -371,7 +369,7 @@ begin  -- architecture rtl
  				clk 		=> ClkSys100MhzxC,
             	rst 		=> RstxR,
             	ready		=> ready_cal_s,
-            	start		=> start_cal_s,
+            	start		=> ready_cal_s, --start_cal_s,
             	finished	=> finished_s,
             	c_real		=> c_real_s,
             	c_imaginary	=> c_imaginary_s,
@@ -389,19 +387,18 @@ begin  -- architecture rtl
     ram_dual_portxB : block is
     begin  -- block ImageGeneratorxB
 
+		wea_ram_s(0) <= finished_s;
         ---------------------------------------------------------------------------
         -- Complex Value Generator
         ---------------------------------------------------------------------------
-        ram_dual_portxI : entity work.ram_dual_port
+        ram_dual_portxI : ram_dual_port
             port map (
  				clka 	=> ClkSys100MhzxC,
-            	ena 	=> finished_s,
-            	wea		=> wea_ram_s,	-- Pas sur 
-            	addra	=> x_screen_cal_s & y_screen_cal_s,
+            	wea		=> wea_ram_s,
+            	addra	=> y_screen_cal_s & x_screen_cal_s,
             	dina	=> iterations_s,
             	clkb	=> ClkVgaxC,
-            	enb		=> VidOnxS,
-            	addrb	=> HCountxD(9 downto 0) & VCountxD(9 downto 0),
+            	addrb	=> VCountxD(9 downto 0) & HCountxD(9 downto 0),
             	doutb	=> doutb_ram_s
             	);
 
